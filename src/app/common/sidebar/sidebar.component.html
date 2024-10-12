@@ -1,0 +1,18 @@
+<img src="/assets/svg/logo-small.svg"  class="ml16 mb20" alt ="" />
+
+<nav>
+	<ul class="main-menu-list">
+		<li *ngFor="let menuItem of menuItems">
+			<button class="menu-item">
+				 <ng-container *ngComponentOutlet="menuItem.icon"></ng-container>{{menuItem.label}} 
+			</button>
+		</li>
+	</ul>
+</nav>
+<p class="medium-text mb20">Followers</p>
+<app-subscriber-card></app-subscriber-card>
+<div class="mt20 to-subscribers">
+	<a [routerLink]="['/subscribers']"
+	class="to-subscribers-link medium-text">All followers</a>
+	<app-right-arrow-icon class="to-subscribers-icon" />
+</div>

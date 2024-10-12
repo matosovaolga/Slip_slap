@@ -1,0 +1,49 @@
+:host {
+  display: block;
+  padding: 20px 12px;
+  background-color: var(--dark-color);
+}
+
+.main-menu-list {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+}
+
+.menu-item {
+  padding: 16px 12px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--light-color);
+  display: grid;
+  grid-template-columns: 16px 1fr max-content;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  width: 100%;
+  text-align: left;
+  border-radius: 2px;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--dark-hover-color);
+    color: var(--primary-color);
+  }
+}
+
+.to-subscribers {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+
+	&-link {
+		color: var(--primary-color);
+		text-decoration: none;
+	}
+
+	&-icon {
+		color: var(--primary-color);
+		
+	}
+}
