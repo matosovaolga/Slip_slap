@@ -11,11 +11,5 @@ import { ProfileService } from '../../data/services/profile.service';
   styleUrl: './layout.component.scss',
 })
 export class LayoutComponent {
-  profileService = inject(ProfileService);
 
-  ngOnInit() {
-    this.profileService.getMe().subscribe((res) => {
-		console.log(res)
-	});
-  }
 }

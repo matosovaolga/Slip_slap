@@ -2,6 +2,7 @@
   display: block;
   padding: 20px 12px;
   background-color: var(--dark-color);
+  position: relative;
 }
 
 .main-menu-list {
@@ -33,17 +34,43 @@
 }
 
 .to-subscribers {
-	display: flex;
-	gap: 10px;
-	align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 
-	&-link {
-		color: var(--primary-color);
-		text-decoration: none;
-	}
+  &-link {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
 
-	&-icon {
-		color: var(--primary-color);
-		
-	}
+  &-icon {
+    color: var(--primary-color);
+  }
+}
+.sidebar-footer {
+  background-color: var(--dark-hover-color);
+  border-radius: 2px;
+  padding: 4px 16px;
+  display: grid;
+  grid-template-columns: 32px 1fr 16px;
+  gap: 12px;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 20px);
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  .username {
+	font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  .settings-btn {
+	color: var(--primary-color);
+	cursor: pointer;
+  }
 }

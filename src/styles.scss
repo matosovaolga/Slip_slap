@@ -25,12 +25,19 @@ body {
   background-image: url("/assets/images/background.webp");
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100dvh;
 }
 
 .h1 {
   font-size: 48px;
   line-height: 56px;
   font-weight: 800;
+}
+
+.h4 {
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 32px;
 }
 
 .h6 {
