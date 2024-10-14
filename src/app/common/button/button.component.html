@@ -1,2 +1,3 @@
-<button class="btn full-width" ><ng-content></ng-content></button>
-
+<button class="btn full-width" [ngClass]="{ 'text-center': isCenter }">
+  <ng-content></ng-content>
+</button>

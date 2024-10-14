@@ -3,6 +3,7 @@
 :root {
   --dark-color: #000;
   --light-color: #fff;
+  --light-transparent-color: rgb(255, 255, 255, 0.75);
   --primary-color: #ae7aff;
 
   --dark-hover-color: rgba(22, 22, 22, 1);
@@ -35,9 +36,9 @@ body {
 }
 
 .h4 {
-	font-size: 24px;
-	font-weight: 800;
-	line-height: 32px;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32px;
 }
 
 .h6 {
@@ -69,6 +70,40 @@ body {
   font-weight: 400;
 }
 
+.ss-form {
+  &-input,
+  &-textarea {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    border: 0;
+    border-bottom: 1px solid var(--light-color);
+    line-height: 32px;
+    background-color: transparent;
+    color: var(--light-color);
+    outline: none;
+    font-family: var(--primary-font-family);
+  }
+
+  &-textarea {
+    resize: none;
+  }
+
+  &-label {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__text {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      color: var(--light-transparent-color);
+    }
+  }
+}
+
 .ss-control-label {
   font-weight: 700;
   font-size: 12px;
@@ -89,4 +124,10 @@ body {
   width: 100%;
   color: var(--light-color);
   outline: none;
+}
+
+.text-center {
+	text-align: center;
+	justify-items: center;
+	justify-content: center;
 }

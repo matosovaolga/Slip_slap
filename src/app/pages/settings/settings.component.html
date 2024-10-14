@@ -1,11 +1,38 @@
-<!-- <header class="profile-page-header">
-  <app-profile-header [profile]="profile"></app-profile-header>
-  <app-button (click)="navigateSection()" class="edit-profile-btn"
-    >Edit <app-settings-icon></app-settings-icon
-  ></app-button>
-</header> -->
-<form class="profile-form">
-<div class="two-columns">
-	
-</div>
+<app-profile-header></app-profile-header>
+<form class="profile-form__wrapper" [formGroup]="form">
+  <div class="profile-form">
+    <div class="two-columns">
+      <label class="ss-form-label">
+        <span class="ss-form-label__text">First Name</span>
+        <input type="text" formControlName="firstName" class="ss-form-input" />
+      </label>
+      <label class="ss-form-label">
+        <span class="ss-form-label__text">Last Name</span>
+        <input type="text" formControlName="lastName" class="ss-form-input" />
+      </label>
+    </div>
+    <label class="ss-form-label">
+      <span class="ss-form-label__text">Telegram username</span>
+      <input type="text" formControlName="username" class="ss-form-input" />
+    </label>
+    <label class="ss-form-label">
+      <span class="ss-form-label__text">About me</span>
+      <textarea
+        formControlName="description"
+        rows="4"
+        class="ss-form-textarea"
+      ></textarea>
+    </label>
+    <label class="ss-form-label">
+      <span class="ss-form-label__text">Stack</span>
+      <input type="text" formControlName="stack" class="ss-form-input" />
+    </label>
+  </div>
+  <div class="">
+	<div>
+		<app-button 
+		(click)="onSave()"
+		[isCenter]="true">Save</app-button>
+	</div>
+  </div>
 </form>
