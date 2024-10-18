@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ChipsComponent } from '../chips/chips.component';
 import { ButtonComponent } from '../button/button.component';
 import { IProfile } from '../../data/interfaces/profile.interface';
 import { ImgUrlPipe } from '../../helpers/pipes/img-url.pipe';
+import { ProfileService } from '../../data/services/profile.service';
 
 @Component({
   selector: 'app-profile-card',
@@ -13,4 +14,9 @@ import { ImgUrlPipe } from '../../helpers/pipes/img-url.pipe';
 })
 export class ProfileCardComponent {
   @Input() profile!: IProfile;
+  profileService = inject(ProfileService);
+
+  subscribeToFollowers(id: number) {
+	this.profileService.subscribeAccount(id).subscribe(res => console.log(res));
+  };
 }

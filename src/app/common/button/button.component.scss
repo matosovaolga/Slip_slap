@@ -10,6 +10,13 @@
   justify-content: space-between;
   align-items: center;
   gap: 5px;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background: var(--primary-hover-color);
+    color: var(--light-color);
+    cursor: pointer;
+  }
 
   &.text-center {
     justify-content: center;

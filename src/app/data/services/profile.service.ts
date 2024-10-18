@@ -37,11 +37,16 @@ export class ProfileService {
   uploadAvatar(file: File) {
     const fd = new FormData();
     fd.append('image', file);
+    return this.http.post<IProfile>(`${BASE_API_URL}account/upload_image`, fd);
   }
 
   getSubscribersShortList(subsAmount = 3) {
     return this.http
       .get<IPageble<IProfile>>(`${BASE_API_URL}account/subscribers/`)
       .pipe(map((res) => res.items.slice(0, subsAmount)));
+  }
+
+  subscribeAccount(id: number) {
+	   return this.http.post(`${BASE_API_URL}account/subscribe/${id}`, '');
   }
 }

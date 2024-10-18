@@ -2,10 +2,11 @@
 @import "margins";
 :root {
   --dark-color: #000;
+
   --light-color: #fff;
   --light-transparent-color: rgb(255, 255, 255, 0.75);
   --primary-color: #ae7aff;
-
+  --primary-hover-color: #6330b5;
   --dark-hover-color: rgba(22, 22, 22, 1);
 
   --primary-font-family: "JetBrains Mono", sans-serif;
@@ -127,7 +128,7 @@ body {
 }
 
 .text-center {
-	text-align: center;
-	justify-items: center;
-	justify-content: center;
+  text-align: center;
+  justify-items: center;
+  justify-content: center;
 }

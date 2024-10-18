@@ -18,7 +18,7 @@
     }
   </div>
   <div class="profole-card__action-btns">
-    <app-button>Subscribe</app-button>
+    <app-button [isCenter]="true"  (click)="subscribeToFollowers(profile.id)">Subscribe</app-button>
   </div>
 </div>
 }

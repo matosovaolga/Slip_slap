@@ -3,11 +3,11 @@ export interface IProfile {
   username: string;
   avatarUrl: string | null;
   subscribersAmount: number;
-  firstName: string,
-  lastName: string,
-  isActive: boolean,
-  stack: string[],
-  city: string,
-  description: string
+  firstName: string;
+  lastName: string;
+  isActive: boolean;
+  stack: string | string[] | null | undefined;
+  city: string;
+  description: string;
 }
 

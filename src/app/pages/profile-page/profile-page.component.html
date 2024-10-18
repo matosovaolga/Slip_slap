@@ -32,7 +32,7 @@
     </div>
     <h3 class="h6 mb16">Skills</h3>
     <div class="stack-wrap mb32">
-      @for (skill of ['css', 'react']; track skill) {
+      @for (skill of profile.stack; track skill) {
       <app-chips>{{ skill }}</app-chips>
       }
     </div>

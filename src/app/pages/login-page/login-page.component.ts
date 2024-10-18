@@ -11,10 +11,16 @@ import { ILogin } from '../../data/interfaces/auth.interfaces';
 import { tap } from 'rxjs';
 import { Router } from '@angular/router';
 import { ViewIconComponent } from "../../common/icons/view_icon/view_icon.component";
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-login-page',
   standalone: true,
-  imports: [ButtonComponent, ReactiveFormsModule, ViewIconComponent],
+  imports: [
+    ButtonComponent,
+    ReactiveFormsModule,
+    ViewIconComponent,
+    CommonModule,
+  ],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.scss',
 })
@@ -31,7 +37,6 @@ export class LoginPageComponent {
     });
 
   onSubmit() {
-	
     const loginData: ILogin = {
       username: this.form.value.username,
       password: this.form.value.password,
@@ -39,8 +44,8 @@ export class LoginPageComponent {
 
     if (this.form.valid) {
       this.authService.login(loginData).subscribe((res) => {
-		this.router.navigate(['/'])
-	  })
+        this.router.navigate(['/']);
+      });
     }
   }
 }

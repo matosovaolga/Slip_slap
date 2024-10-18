@@ -8,6 +8,7 @@
       class="ss-control-input"
       placeholder="Login"
     />
+    <div *ngIf="form.controls.username.errors?.['required']">Name is required.</div>
   </label>
   <label class="ss-control-label mb32">
     Password
@@ -20,13 +21,13 @@
       />
       <button
         class="password-eye-btn"
-		[class.active]="isPasswordVisible()"
+        [class.active]="isPasswordVisible()"
         (click)="isPasswordVisible.set(!isPasswordVisible())"
       >
         <app-view-icon></app-view-icon>
       </button>
     </span>
   </label>
-  <app-button type="submit">Log In</app-button>
+  <app-button [isCenter]="true" type="submit">Log In</app-button>
 </form>
 <img src="/assets/svg/logo-big.svg" class="ss-login-img" alt="" />

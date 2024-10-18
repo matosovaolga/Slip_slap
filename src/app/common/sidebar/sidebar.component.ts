@@ -4,7 +4,7 @@ import { SearchIconComponent } from '../icons/search-icon/search-icon.component'
 import { ChatIconComponent } from '../icons/chat-icon/chat-icon.component';
 import { CommonModule } from '@angular/common';
 import { SubscriberCardComponent } from './subscriber-card/subscriber-card.component';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterLinkActive } from '@angular/router';
 import { RightArrowIconComponent } from '../icons/right-arrow-icon/right-arrow-icon.component';
 import { ProfileService } from '../../data/services/profile.service';
 import { firstValueFrom } from 'rxjs';
@@ -17,6 +17,7 @@ import { SettingsIconComponent } from "../icons/settings-icon/settings-icon.comp
   imports: [
     HomeIconComponent,
     RouterLink,
+	RouterLinkActive,
     CommonModule,
     SubscriberCardComponent,
     RightArrowIconComponent,
@@ -36,7 +37,7 @@ export class SidebarComponent {
     {
       label: 'My profile',
       icon: HomeIconComponent,
-      link: '',
+      link: 'profile/me',
     },
     {
       label: 'Chats',
